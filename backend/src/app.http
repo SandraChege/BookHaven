@@ -1,0 +1,84 @@
+###REGISTER USER
+POST http://localhost:4500/user/register
+Content-Type: application/json
+
+{
+    "fullname":"Sandra Mwihaki Chege",
+    "username": "SandraChege123",
+    "phone_no": "0700000000",
+    "email":"9superbikes@gmail.com",
+    "password":"12345678"
+}
+
+###LOGIN USER
+POST http://localhost:4500/user/login
+Content-Type: application/json
+
+{
+    "email":"9superbikes@gmail.com",
+    "password":"12345678"
+}
+
+###CHECK USER DETAILS
+GET http://localhost:4500/user/checkuserdetails
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiJkZWZkZGE1OS1jZDNkLTQ1NTUtOTRhZC0yN2Q4ZWEwN2UwMGUiLCJlbWFpbCI6IjlzdXBlcmJpa2VzQGdtYWlsLmNvbSIsImZ1bGxuYW1lIjoiU2FuZHJhIE13aWhha2kgQ2hlZ2UiLCJ1c2VybmFtZSI6IlNhbmRyYUNoZWdlMTIzIiwicGhvbmVfbm8iOjcwMDAwMDAwMCwicm9sZSI6InVzZXIiLCJwcm9maWxlVXJsIjoibm8taW1hZ2UiLCJwcm9maWxlQ2FwdGlvbiI6Ik5vIENhcHRpb24iLCJpc1dlbGNvbWVkIjpmYWxzZSwiaXNEZWxldGVkIjpmYWxzZSwicmVzZXRQYXNzd29yZCI6ZmFsc2UsIk9UUCI6bnVsbCwiY3JlYXRlZF9hdCI6IjIwMjMtMTItMTNUMjI6NTk6MTAuOTg3WiIsImlhdCI6MTcwMjQ5NzU1NCwiZXhwIjoxNzAyNTgzOTU0fQ.Z-of4RJuuNnBHh7h9Ds_oVk86CpTr3C2OwXtEpibYAQ
+
+###GET ALL USERS
+GET http://localhost:4500/user/getallusers
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiJkZWZkZGE1OS1jZDNkLTQ1NTUtOTRhZC0yN2Q4ZWEwN2UwMGUiLCJlbWFpbCI6IjlzdXBlcmJpa2VzQGdtYWlsLmNvbSIsImZ1bGxuYW1lIjoiU2FuZHJhIE13aWhha2kgQ2hlZ2UiLCJ1c2VybmFtZSI6IlNhbmRyYUNoZWdlMTIzIiwicGhvbmVfbm8iOjcwMDAwMDAwMCwicm9sZSI6InVzZXIiLCJwcm9maWxlVXJsIjoibm8taW1hZ2UiLCJwcm9maWxlQ2FwdGlvbiI6Ik5vIENhcHRpb24iLCJpc1dlbGNvbWVkIjpmYWxzZSwiaXNEZWxldGVkIjpmYWxzZSwicmVzZXRQYXNzd29yZCI6ZmFsc2UsIk9UUCI6bnVsbCwiY3JlYXRlZF9hdCI6IjIwMjMtMTItMTNUMjI6NTk6MTAuOTg3WiIsImlhdCI6MTcwMjQ5NzU1NCwiZXhwIjoxNzAyNTgzOTU0fQ.Z-of4RJuuNnBHh7h9Ds_oVk86CpTr3C2OwXtEpibYAQ
+
+###getoneuser
+POST http://localhost:4500/user/getoneuser
+Content-Type: application/json
+
+{
+    "email": "9superbikes@gmail.com"
+}
+
+###updateuser
+PUT http://localhost:4500/user/updateuser
+Content-Type: application/json
+
+{
+    "userID":"defdda59-cd3d-4555-94ad-27d8ea07e00e",
+    "fullname": "Sandra Mwihaki Chege",
+    "profileUrl": "https://cdn.pixabay.com/photo/2023/11/21/00/09/ai-generated-8402112_1280.png",
+    "profileCaption": "Embarking on literary adventures where every page is a portal to another world, unlocking emotions unexplored. In the realm of books, I traverse landscapes of imagination, dance with diverse characters, and taste the sweetness of words. Closing each book, I carry fragments of these extraordinary journeys into the tapestry of my real-world existence."
+}
+
+###CREATE BOOK
+POST http://localhost:4500/book/createbook
+Content-Type: application/json
+
+{
+    "author":"A.M Myers",
+    "series": "Bayou Devils MC#1",
+    "genre":" Romance",
+    "content":"WOW this was the first I read from this author.. ",
+    "bookImage":"https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1593754858i/54370482.jpg",
+    "title":"Hopelessly Devoted",
+    "userID":"defdda59-cd3d-4555-94ad-27d8ea07e00e"
+}
+
+###GET ALL BOOKS
+GET http://localhost:4500/book/allbooks
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiJkZWZkZGE1OS1jZDNkLTQ1NTUtOTRhZC0yN2Q4ZWEwN2UwMGUiLCJlbWFpbCI6IjlzdXBlcmJpa2VzQGdtYWlsLmNvbSIsImZ1bGxuYW1lIjoiU2FuZHJhIE13aWhha2kgQ2hlZ2UiLCJ1c2VybmFtZSI6IlNhbmRyYUNoZWdlMTIzIiwicGhvbmVfbm8iOjcwMDAwMDAwMCwicm9sZSI6InVzZXIiLCJwcm9maWxlVXJsIjoibm8taW1hZ2UiLCJwcm9maWxlQ2FwdGlvbiI6Ik5vIENhcHRpb24iLCJpc1dlbGNvbWVkIjpmYWxzZSwiaXNEZWxldGVkIjpmYWxzZSwicmVzZXRQYXNzd29yZCI6ZmFsc2UsIk9UUCI6bnVsbCwiY3JlYXRlZF9hdCI6IjIwMjMtMTItMTNUMjI6NTk6MTAuOTg3WiIsImlhdCI6MTcwMjQ5NzU1NCwiZXhwIjoxNzAyNTgzOTU0fQ.Z-of4RJuuNnBHh7h9Ds_oVk86CpTr3C2OwXtEpibYAQ
+
+###GET SINGLE BOOK
+GET http://localhost:4500/book/singlebook/2e52aa1f-189b-4afb-b3b4-ad9e42f70969
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiJkZWZkZGE1OS1jZDNkLTQ1NTUtOTRhZC0yN2Q4ZWEwN2UwMGUiLCJlbWFpbCI6IjlzdXBlcmJpa2VzQGdtYWlsLmNvbSIsImZ1bGxuYW1lIjoiU2FuZHJhIE13aWhha2kgQ2hlZ2UiLCJ1c2VybmFtZSI6IlNhbmRyYUNoZWdlMTIzIiwicGhvbmVfbm8iOjcwMDAwMDAwMCwicm9sZSI6InVzZXIiLCJwcm9maWxlVXJsIjoibm8taW1hZ2UiLCJwcm9maWxlQ2FwdGlvbiI6Ik5vIENhcHRpb24iLCJpc1dlbGNvbWVkIjpmYWxzZSwiaXNEZWxldGVkIjpmYWxzZSwicmVzZXRQYXNzd29yZCI6ZmFsc2UsIk9UUCI6bnVsbCwiY3JlYXRlZF9hdCI6IjIwMjMtMTItMTNUMjI6NTk6MTAuOTg3WiIsImlhdCI6MTcwMjQ5NzU1NCwiZXhwIjoxNzAyNTgzOTU0fQ.Z-of4RJuuNnBHh7h9Ds_oVk86CpTr3C2OwXtEpibYAQ
+
+###UPDATE BOOK
+PUT http://localhost:4500/book/updatebook
+Content-Type: application/json
+
+{
+    "bookID":"2e52aa1f-189b-4afb-b3b4-ad9e42f70969",
+    "author":"A.M Myers",
+    "series": "Bayou Devils MC#1",
+    "genre":" Romance",
+    "content":"WOW this was the first I read from this author..now I need to go get the rest in this series.. This book had me from the get go. I love MC books so when I got the opportunity to read this I jumped",
+    "bookImage":"https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1593754858i/54370482.jpg",
+    "title":"Hopelessly Devoted",
+    "userID":"defdda59-cd3d-4555-94ad-27d8ea07e00e"
+}
