@@ -1,0 +1,53 @@
+<!-- <app-admindashboard></app-admindashboard>
+<div class="destinationcontainer">
+    <div class="addtour" >
+    <h2 >Add a book</h2>
+
+    <form  [formGroup] ="addProductForm" (ngSubmit)="addNewProduct()">
+       <div class="container1 gap-x-[5rem]">
+            <div class="container2">
+                <label for=""class="text-[1rem]">Image:</label> 
+                <input data-cy="image" type="text" formControlName="image"  placeholder="Image Url" class="rounded-[5px] border-solid border-[1px] border-gray-500 outline-none px-4 py-[8px] mt-[5px]">
+                <div *ngIf="addProductForm.get('image')?.invalid && addProductForm.get('image')?.touched" class="text-red-500">Image is required</div> 
+            </div>
+            <div class="container2">
+                <label for="" class="text-[1rem]">Product Name</label>
+                <input data-cy="title" type="text" formControlName="title" placeholder="Enter product name" class="rounded-[5px] border-solid border-[1px] border-gray-500 outline-none px-4 py-[8px] mt-[5px]">
+                <div *ngIf="addProductForm.get('title')?.invalid && addProductForm.get('title')?.touched" class="text-red-500">Tour name is required</div>
+            </div>
+       </div>
+
+       <div class="container1 gap-x-[5rem]">
+            <div class="container2">
+                <label for="" class="text-[1rem]">Price</label>
+                <input type="number" data-cy="price" formControlName="price" placeholder="Enter product price" class="rounded-[5px] border-solid border-[1px] border-gray-500 outline-none px-4 py-[8px] mt-[5px]">
+                <div *ngIf="addProductForm.get('price')?.invalid && addProductForm.get('price')?.touched" class="text-red-500">Price is required</div>
+            </div>
+            <div class="container2">
+                <label for="" class="text-[1rem]">Available stock</label>
+                <input type="number" data-cy="stock" formControlName="stock" placeholder="Enter stock" class="rounded-[5px] border-solid border-[1px] border-gray-500 outline-none px-4 py-[8px] mt-[5px]">
+                <div *ngIf="addProductForm.get('stock')?.invalid && addProductForm.get('stock')?.touched" class="text-red-500">Tour count is required</div>
+            </div>
+       </div>
+
+        <div class="container1 gap-x-[5rem]">
+            <div class="container2">
+                <label for="" class="text-[1rem]">Category</label>
+                <input type="text" data-cy="category" formControlName="category" placeholder="Enter product category" class="rounded-[5px] border-solid border-[1px] border-gray-500 outline-none px-4 py-[8px] mt-[5px]">
+                <div *ngIf="addProductForm.get('category')?.invalid && addProductForm.get('category')?.touched" class="text-red-500">Start Date is required and cannot be in the past</div>
+            </div>
+            
+        </div>
+
+        <div class="container1 flex flex-col">
+            <label for="" class="text-[1rem]">Product Description</label>
+            <input type="text" data-cy="description" formControlName="description" placeholder="Enter product description" class="rounded-[5px] border-solid border-[1px] border-gray-500 outline-none px-4 py-[8px] mt-[5px]">
+            <div *ngIf="addProductForm.get('description')?.invalid && addProductForm.get('description')?.touched" class="text-red-500">Description is required</div>
+        </div>
+
+        <div class="container1 description flex flex-col" style="outline: none;">
+            <input type="submit" data-cy="addNewProduct" value="Add Product" class="rounded-[5px] bg-[#D03E3B] text-white rounded-[2px] outline-none px-4 py-[8px] mt-[1rem] hover:cursor-pointer">
+        </div>
+    </form>
+</div>
+-->

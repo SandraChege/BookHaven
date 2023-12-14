@@ -1,0 +1,53 @@
+<div class="login w-[100vw] h-[100vh] flex flex-col justify-center items-center text-base">
+    <h2 class="text-center mb-2 text-[2rem] py-[10px]">Sign in</h2>
+    <div class="w-[70vw] flex justify-center items-center logincontainer">
+        <div class="w-[35vw] image">
+            <img src="https://cdn.pixabay.com/photo/2019/01/28/11/56/registration-3960205_1280.jpg" alt="">
+        </div>
+        <div class="w-[35vw] textContainer">
+            <div  class="success-message"  *ngIf="showSuccessMessage" data-cy="registered-success-popup">
+                <!-- User login successfully. -->
+                <img src="https://i.gifer.com/7efs.gif" alt="">
+            </div>
+
+            <div class="error-message"  *ngIf="showErrorMessage" data-cy="registered-failure-popup">
+                <!-- User login failed. -->
+                <img src="https://cdn.dribbble.com/users/422171/screenshots/5348345/close-and-reply.gif" alt="">
+            </div>
+
+            <form data-cy="loginForm"  [formGroup] = "loginForm" (ngSubmit)="loginNewUser()" class="flex flex-col my-4 mx-6">
+                <div class="flex flex-col py-1 ">
+                    <label for="" class="text-[1rem]">Email</label>
+                    <input data-cy="userEmail" type="email" formControlName="email" placeholder="Enter your email" class="rounded-[10px] border-solid border-[1px] border-gray-500 outline-none px-4 py-[4px] mt-[5px]">
+                    <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="text-red-500">Email is required</div>
+                </div>
+
+                <div class="flex flex-col py-1">
+                    <label for="" class="text-[1rem]">Password</label>
+                    <input data-cy="userPassword" type="password" formControlName="password" placeholder="Enter your password" class="rounded-[10px] border-solid border-[1px] border-gray-500 outline-none px-4 py-[4px] mt-[5px]">
+                    <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="text-red-500">Password is required</div>
+                <!--<div *ngIf="registrationForm.get('password')?.errors?.minlength">Password must be at least 8 characters long.</div>-->
+                </div>
+                <div class="flex flex-col">
+                    <input data-cy="login_user_btn" type="submit" value="Let's go" class="rounded-[10px] text-white border-solid border-[1px] bg-[#2563EB] border-[#2563EB] outline-none px-4 py-[6px] mt-[1rem] hover:cursor-pointer">
+                </div>
+
+                <div class="flex flex-col mt-4 text-[13px] text-gray-900">
+                    <div class="text-right active:text-[#8800FF]">
+                        <a routerLink="/forgotpassword" class="active:text-[#f9fafb]">Forgot password</a>
+                    </div>
+
+                    <div class="flex flex-row flex-grow flex items-center">
+                        <hr class="flex-grow border-t border-gray-900 mx-4">
+                        <span>or</span>
+                        <hr class="flex-grow border-t border-gray-900 mx-4">
+                    </div>            
+
+                    <div class="text-left active:text-[#8800FF]">
+                        <a routerLink="/registers" class="active:text-[#f9fafb]">Don't have an account</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

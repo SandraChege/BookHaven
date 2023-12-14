@@ -16,4 +16,9 @@ CREATE TABLE Users (
 );
 
 SELECT * FROM Users;
+
+-- UPDATE Users
+-- set role = 'admin'
+-- where email = '9superbikes@gmail.com'
+
 DROP TABLE Users;

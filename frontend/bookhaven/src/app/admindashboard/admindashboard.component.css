@@ -1,0 +1,26 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px 20px;
+}
+.navigation p {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.navlinks {
+  display: flex;
+  align-items: center;
+}
+.navlinks a {
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--purple);
+}
+.navlinks a:hover{
+    color: var(--darkpurple);
+    font-weight: 700;
+}

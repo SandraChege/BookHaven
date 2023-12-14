@@ -1,0 +1,7 @@
+#heroSection{
+    background-image: url('https://t4.ftcdn.net/jpg/03/03/73/47/240_F_303734740_Us6tBZOZxqkfEmFgpf18Ti3gUIIGqo6A.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    height: 100vh;
+}
